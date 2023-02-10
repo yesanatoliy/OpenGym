@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "mongoose": "^6.9.1"
+  },
+  "name": "opengym",
+  "description": "*** ### ***Description*** OpenGym is an website for volleyball players to find information about local events where they can sign up to play volleyball! Players who run these events can use OpenGym to create and promote their events.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yesanatoliy/OpenGym.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yesanatoliy/OpenGym/issues"
+  },
+  "homepage": "https://github.com/yesanatoliy/OpenGym#readme"
+}
