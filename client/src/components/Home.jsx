@@ -1,9 +1,10 @@
-
+import EventList from "./EventList"
 
 const Home = () => {
   return (
     <div>
-        Home
+        <h1>Welcome</h1>
+        <EventList />
     </div>
   )
 }
