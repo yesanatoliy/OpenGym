@@ -11,6 +11,8 @@ const getAllEvents = async (req, res) => {
 
 const createEvent = async (req, res) => {
     try{
+        const { userId } = req.params
+        req.body = { ...req.body, user_id: userId }
         const event = await new Event(req.body)
         await event.save()
         return res.status(201).json({
