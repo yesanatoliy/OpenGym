@@ -69,18 +69,19 @@ const getEventComments = async (req,res) => {
     }
 }
 
-// const createComment = async (req, res) => {
-//     try{
-//         const { eventId } = req.params
-//         const comment = await new Comment({ event_id: eventId, req.body})
-//         await comment.save()
-//         return res.status(201).json({
-//             comment
-//         })
-//     } catch (error) {
-//         return res.status(500).json({ error: error.message })
-//     }
-// }
+const createComment = async (req, res) => {
+    try{
+        const { eventId, userId } = req.params
+        req.body = { ...req.body, event_id: eventId, user_id: userId }
+        const comment = await new Comment(req.body)
+        await comment.save()
+        return res.status(201).json({
+            comment
+        })
+    } catch (error) {
+        return res.status(500).json({ error: error.message })
+    }
+}
 
 const updateComment = async (req, res) => {
     try{
