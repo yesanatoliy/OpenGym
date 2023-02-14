@@ -23,7 +23,7 @@ const createEvent = async (req, res) => {
 
 const updateEvent = async (req,res) => {
     try{
-        const event = await Event.findByIdAndUpdate(req.params.id, req.body, {new: true})
+        const event = await Event.findByIdAndUpdate(req.params.eventId, req.body, {new: true})
         res.status(200).json(event)
     } catch (error) {
         return res.status(500).send(error.message)
@@ -32,8 +32,8 @@ const updateEvent = async (req,res) => {
 
 const deleteEvent = async (req,res) => {
     try{
-        const { id } = req.params
-        const deleted = await Event.findByIdAndDelete(id)
+        const { eventId } = req.params
+        const deleted = await Event.findByIdAndDelete(eventId)
         if (deleted) {
             return res.status(200).send("Event deleted")
         }
@@ -45,8 +45,8 @@ const deleteEvent = async (req,res) => {
 
 const getEventById = async (req,res) => {
     try{
-        const { id } = req.params
-        const event = await Event.findById(id)
+        const { eventId } = req.params
+        const event = await Event.findById(eventId)
         if (event) {
             return res.status(200).json({ event })
         }
@@ -77,7 +77,7 @@ const createComment = async (req, res) => {
 
 const updateComment = async (req, res) => {
     try{
-        const comment = await Comment.findByIdAndUpdate(req.params.id, req.body, {new: true})
+        const comment = await Comment.findByIdAndUpdate(req.params.commentId, req.body, {new: true})
         res.status(200).json(comment)
     } catch (error) {
         return res.status(500).send(error.message)
@@ -86,8 +86,8 @@ const updateComment = async (req, res) => {
 
 const deleteComment = async (req,res) => {
     try{
-        const { id } = req.params
-        const deleted = await Comment.findByIdAndDelete(id)
+        const { commentId } = req.params
+        const deleted = await Comment.findByIdAndDelete(commentId)
         if (deleted) {
             return res.status(200).send("Comment deleted")
         }
@@ -99,8 +99,8 @@ const deleteComment = async (req,res) => {
 
 const getUser = async (req,res) => {
     try{
-        const { id } = req.params
-        const user = await User.findById(id)
+        const { userId } = req.params
+        const user = await User.findById(userId)
         if (user) {
             return res.status(200).json({ user })
         }
@@ -124,8 +124,8 @@ const createUser = async (req, res) => {
 
 const deleteUser = async (req,res) => {
     try{
-        const { id } = req.params
-        const deleted = await User.findByIdAndDelete(id)
+        const { userId } = req.params
+        const deleted = await User.findByIdAndDelete(userId)
         if (deleted) {
             return res.status(200).send("User deleted")
         }
@@ -137,7 +137,7 @@ const deleteUser = async (req,res) => {
 
 const updateUser = async (req,res) => {
     try{
-        const user = await User.findByIdAndUpdate(req.params.id, req.body, {new: true})
+        const user = await User.findByIdAndUpdate(req.params.userId, req.body, {new: true})
         res.status(200).json(user)
     } catch (error) {
         return res.status(500).send(error.message)
