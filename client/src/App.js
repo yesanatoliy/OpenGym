@@ -1,20 +1,20 @@
 import './App.css'
-import Home from './components/Home'
-import NavBar from './components/NavBar'
-import ProfilePage from './components/ProfilePage'
+import Home from './pages/Home'
+import ProfilePage from './pages/ProfilePage'
 import Search from './components/Search'
+import EventPage from './pages/EventPage'
+import LoginPage from './pages/LoginPage'
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <NavBar />
-      </header>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/events/:eventId" element={<EventPage />} />
       </Routes>
     </div>
   );

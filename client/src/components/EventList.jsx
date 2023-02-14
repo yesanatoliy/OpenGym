@@ -30,7 +30,7 @@ const EventList = () => {
                 date={event.date}
                 time={event.time}
                 description={event.description}
-                date={event.date}
+                id={event._id}
                 />
             ))
         }

@@ -1,4 +1,4 @@
-import EventList from "./EventList"
+import EventList from "../components/EventList"
 
 const Home = () => {
   return (
