@@ -21,7 +21,17 @@ const EventList = () => {
     <div>
         {
             events.map((event) => (
-                <Event />
+                <Event 
+                name={event.name}
+                address={event.address}
+                cost={event.cost}
+                level={event.level}
+                contact={event.contact}
+                date={event.date}
+                time={event.time}
+                description={event.description}
+                date={event.date}
+                />
             ))
         }
         
