@@ -11,11 +11,15 @@ router.delete('/events/:eventId', controllers.deleteEvent)
 router.post('/user', controllers.createUser)
 router.get('/user/:userId', controllers.getUser)
 router.put('/user/:userId', controllers.updateUser)
-router.get('/events/:eventId/comments', controllers.getEventComments)
 router.delete('/user/:userId', controllers.deleteUser)
-router.post('/comments', controllers.createComment)
-// router.delete('/comments/:id', controllers.deleteComment)
-// router.put('/comments/:id', controllers.updateComment)
+router.get('/events/:eventId/comments', controllers.getEventComments)
+router.put('/comments/:id', controllers.updateComment)
+router.delete('/comments/:id', controllers.deleteComment)
+// router.post('/events/:eventId/comments', controllers.createComment)
+
+
+
+
 
 
 
