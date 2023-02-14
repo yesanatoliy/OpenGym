@@ -56,12 +56,18 @@ const getEventById = async (req,res) => {
     }
 }
 
-// const getComments = async (req,res) => {
-//     try{
-//         const { id } = req.params
-
-//     }
-// }
+const getEventComments = async (req,res) => {
+    try{
+        const { eventId } = req.params
+        const comments = await Comment.find({ event_id: eventId })
+        if (comments) {
+            return res.status(200).json({ comments })
+        }
+        return res.status(404).send(error.message)
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
 
 const createComment = async (req, res) => {
     try{
@@ -150,6 +156,7 @@ module.exports = {
     updateEvent,
     deleteEvent,
     getEventById,
+    getEventComments,
     createComment,
     updateComment,
     deleteComment,
