@@ -17,6 +17,12 @@ const Home = () => {
     <div>
         <h1>Welcome</h1>
         <button onClick={()=> handleClick()}>Add Event</button>
+        <div> 
+          {/* {clicked ? (
+          <EventForm />
+        )} */}
+        </div>
+        
         <EventList />
     </div>
   )
