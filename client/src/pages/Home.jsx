@@ -1,6 +1,6 @@
 import EventList from "../components/EventList"
 import { useState } from "react"
-import EventForm from "../components/EventForm"
+import EventAddForm from "../components/EventAddForm"
 import NavBar from "../components/NavBar"
 const Home = () => {
   
@@ -24,7 +24,7 @@ const Home = () => {
         
         <div> 
           {clicked ? (
-          <EventForm />
+          <EventAddForm />
         ) : <EventList /> }
         </div>
         

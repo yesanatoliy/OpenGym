@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 
-const EventForm = () => {
+const EventAddForm = () => {
   
   const initialState = {
     name: '',
@@ -62,4 +62,4 @@ const EventForm = () => {
   )
 }
 
-export default EventForm
+export default EventAddForm
