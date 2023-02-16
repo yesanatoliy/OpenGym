@@ -1,19 +1,27 @@
 import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const NavBar = () => {
-  return (
+  
+    const navigate = useNavigate()
+
+    const handleClick = () => {
+        navigate(`/profile/${localStorage.getItem('username')}`)
+    }
+  
+    return (
     <div className="nav">
         <nav>
             <Link to="/">
-                Home
+                <button>Home</button>
             </Link>
 
-            <Link to="/profile">
-                Profile
-            </Link>
+            
+            <button onClick={handleClick}>Profile</button> 
+            
             
             <Link to="/search">
-                Search
+                <button>Search</button>
             </Link>
         </nav>
     </div>
