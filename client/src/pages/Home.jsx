@@ -4,6 +4,12 @@ import EventForm from "../components/EventForm"
 const Home = () => {
   const [clicked, toggleClicked] = useState(false)
 
+  const testLocalStorage = () => {
+    console.log(localStorage.getItem("email"))
+  }
+
+  testLocalStorage()
+
   const handleClick = () => {
     if(clicked === false){
       toggleClicked(true)
@@ -15,12 +21,14 @@ const Home = () => {
 
   return (
     <div>
-        <h1>Welcome</h1>
-        <button onClick={()=> handleClick()}>Add Event</button>
+        <h1>Welcome, User</h1>
+        {clicked ? (<button onClick={()=> handleClick()}>Close</button>) : 
+        (<button onClick={()=> handleClick()}>Add Event</button>)}
+        
         <div> 
-          {/* {clicked ? (
+          {clicked ? (
           <EventForm />
-        )} */}
+        ) : (null) }
         </div>
         
         <EventList />

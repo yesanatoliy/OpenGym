@@ -15,6 +15,9 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await axios.post('/api/user', formState)
+    // localStorage.setItem(
+    //   "email", `${formState.email}`
+    //   )
     setFormState(initialState)
     navigate(`/home`)
   }
@@ -24,6 +27,8 @@ const LoginPage = () => {
       {...formState, [e.target.id]: e.target.value}
     )
   }
+
+
   
   
   return (
