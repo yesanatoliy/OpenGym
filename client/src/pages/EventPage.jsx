@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import EventUpdateForm from '../components/EventUpdateForm'
+import NavBar from '../components/NavBar'
 
 const EventPage = () => {
   const navigate = useNavigate()
@@ -43,6 +44,7 @@ const EventPage = () => {
 
   return (
     <div>
+      <NavBar />
       {clicked ? (<div>
         <button onClick={() => handleClick()}>Close</button>
         <EventUpdateForm 

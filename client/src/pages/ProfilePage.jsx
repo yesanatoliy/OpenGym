@@ -1,8 +1,10 @@
 import axios from "axios"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
+import NavBar from "../components/NavBar"
 
 const ProfilePage = () => {
+
   const { user } = useParams()
   const [profile, setProfile] = useState({})
   
@@ -21,6 +23,7 @@ const ProfilePage = () => {
 
   return (
     <div>
+      <NavBar />
       <button>Update</button>
       <h3>{profile.username}</h3>
       <h3>{profile.email}</h3>
