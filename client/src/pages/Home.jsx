@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <div>
-        <h1>Welcome, User</h1>
+        <h1>Welcome, {localStorage.getItem("username")}</h1>
         {clicked ? (<button onClick={()=> handleClick()}>Close</button>) : 
         (<button onClick={()=> handleClick()}>Add Event</button>)}
         

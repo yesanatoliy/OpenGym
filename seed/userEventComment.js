@@ -5,11 +5,13 @@ db.on('error', console.error.bind(console, 'MongoDB connection error: '))
 
 const main = async () => {
     const user1 = await new User({
+        username:'pleeploo',
         email: 'Anatoliy9@test.com',
         password: '1234'
     })
     user1.save()
     const user2 = await new User({
+        username: 'weewop',
         email: 'Jordan1@test.com',
         password: '9852'
     })
