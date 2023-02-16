@@ -1,28 +1,46 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
-const ProfileUpdateForm = (props) => {
+
+const ProfileUpdateForm = () => {
+
+    const { userId } = useParams()
 
     const navigate = useNavigate()
-  
-    const initialState = {
-        username: props.username,
-        email: props.email,
-        password: props.password
+
+    const [formState, setFormState] = useState({})
+    const [profile, setProfile] = useState({})
+
+
+    const getUser = async () => {
+        let result = await axios.get(`/api/profile/${userId}`)
+        setProfile(result.data.user)
+        console.log(profile)
     }
     
-    const [formState, setFormState] = useState(initialState)
-    const [updateStatus, toggleUpdateStatus] = useState(false)
+    useEffect(() => {
+        getUser()
+    }, [])
+
+    useEffect(() => {
+        const initialState = {
+            password: profile.password,
+            username: profile.username,
+            email: profile.email
+        }
+        setFormState(initialState)
+    }, [profile])
+
+    console.log(profile)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await axios.put(`/api/user/${props.id}`, formState)
+        await axios.put(`/api/user/${userId}`, formState)
         localStorage.setItem(
             "username", `${formState.username}`
-            )
-        setFormState(initialState)
-        toggleUpdateStatus(true)
+        )
+        navigate(`/profile/${localStorage.getItem('username')}`)
     }
 
     const handleChange = (e) => {
@@ -30,26 +48,18 @@ const ProfileUpdateForm = (props) => {
             { ...formState, [e.target.id]: e.target.value }
         )
     }
-    if (updateStatus === false){
-        return (
-            
-            <form onSubmit={handleSubmit}>
-                <label htmlFor='username'>Username</label>
-                <input type="text" id='username' onChange={handleChange} value={formState.username} />
-                <label htmlFor="email">Email</label>
-                <input type="text" id="email" onChange={handleChange} value={formState.email} />
-                <label htmlFor="password">Password</label>
-                <input type="password" id="password" onChange={handleChange} value={formState.password} />
-                <button type="submit">Update User</button>
-            </form>
-        )
-    }
-    else {
-        return (
-        <div>
-            Updated!
-        </div>)
-    }
+    return (
+
+        <form onSubmit={handleSubmit}>
+            <label htmlFor='username'>Username</label>
+            <input type="text" id='username' onChange={handleChange} value={formState.username || ''} />
+            <label htmlFor="email">Email</label>
+            <input type="text" id="email" onChange={handleChange} value={formState.email || ''} />
+            <label htmlFor="password">Password</label>
+            <input type="password" id="password" onChange={handleChange} value={formState.password || ''} />
+            <button type="submit">Update User</button>
+        </form>
+    )
 }
 
 export default ProfileUpdateForm
