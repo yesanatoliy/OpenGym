@@ -45,7 +45,18 @@ const EventPage = () => {
     <div>
       {clicked ? (<div>
         <button onClick={() => handleClick()}>Close</button>
-        <EventUpdateForm />
+        <EventUpdateForm 
+        name={event.name}
+        date={event.date}
+        time={event.time}
+        address={event.address}
+        level={event.level}
+        cost={event.cost}
+        contact={event.contact}
+        description={event.description}
+        id={event._id}
+        getEvent={getEvent}
+        />
       </div>) :
         (<div>
           <button onClick={() => handleClick()}>Update Event</button>
