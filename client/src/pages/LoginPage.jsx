@@ -6,7 +6,7 @@ const LoginPage = () => {
   const navigate = useNavigate()
 
   const initialState = {
-    username:'',
+    username: '',
     email: '',
     password: ''
   }
