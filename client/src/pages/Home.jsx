@@ -25,10 +25,10 @@ const Home = () => {
         <div> 
           {clicked ? (
           <EventForm />
-        ) : (null) }
+        ) : <EventList /> }
         </div>
         
-        <EventList />
+        
     </div>
   )
 }
