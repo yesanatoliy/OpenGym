@@ -3,13 +3,8 @@ import { useState } from "react"
 import EventForm from "../components/EventForm"
 import NavBar from "../components/NavBar"
 const Home = () => {
+  
   const [clicked, toggleClicked] = useState(false)
-
-  const testLocalStorage = () => {
-    console.log(localStorage.getItem("email"))
-  }
-
-  testLocalStorage()
 
   const handleClick = () => {
     if(clicked === false){
