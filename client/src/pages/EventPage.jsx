@@ -47,17 +47,17 @@ const EventPage = () => {
       <NavBar />
       {clicked ? (<div>
         <button id="close-two" className='add-event' onClick={() => handleClick()}>Close</button>
-        <EventUpdateForm 
-        name={event.name}
-        date={event.date}
-        time={event.time}
-        address={event.address}
-        level={event.level}
-        cost={event.cost}
-        contact={event.contact}
-        description={event.description}
-        id={event._id}
-        getEvent={getEvent}
+        <EventUpdateForm
+          name={event.name}
+          date={event.date}
+          time={event.time}
+          address={event.address}
+          level={event.level}
+          cost={event.cost}
+          contact={event.contact}
+          description={event.description}
+          id={event._id}
+          getEvent={getEvent}
         />
       </div>) :
         (<div className='event-details'>

@@ -1,18 +1,23 @@
 @keyframes fadein {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 
 
 
-.login{
+.login {
   background-image: url("https://i.imgur.com/Dwg39bJ.jpg");
   background-size: contain;
   padding-bottom: 400px
 }
 
-.login-form{
+.login-form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -23,7 +28,7 @@
   border-radius: 20px
 }
 
-.login-header{
+.login-header {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -36,11 +41,11 @@
 
 }
 
-.login-element{
+.login-element {
   margin: 10px;
 }
 
-.app-description{
+.app-description {
   margin: 50px;
   text-align: center;
 }
@@ -66,14 +71,14 @@ label.login-element {
   text-decoration: underline;
 }
 
-.nav{
+.nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   padding: 20px
 }
 
-.nav-button{
+.nav-button {
   margin-left: 100px;
   border: none;
   background: none;
@@ -89,11 +94,11 @@ label.login-element {
   text-decoration: none;
 }
 
-header.nav{
+header.nav {
   background-image: linear-gradient(to right, rgb(91, 255, 146), rgb(91, 255, 146, 0.6));
 }
 
-.welcome{
+.welcome {
   text-align: center;
   background-color: rgba(211, 215, 217, 0.168);
   color: rgb(100, 100, 100);
@@ -103,18 +108,18 @@ header.nav{
   margin: 20px auto
 }
 
-.home{
+.home {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px
 }
 
-.event{
+.event {
   text-align: center;
 }
 
-.event-post{
+.event-post {
   border: ridge 2px;
   margin-top: 20px;
   padding: 35px 80px;
@@ -123,11 +128,11 @@ header.nav{
   color: white;
 }
 
-.event-post:hover{
+.event-post:hover {
   cursor: pointer
 }
 
-.add-event{
+.add-event {
   border-radius: 10px;
   background-color: #a6a6a6;
   color: white;
@@ -136,38 +141,39 @@ header.nav{
   transition-duration: 0.4s;
 }
 
-.add-event:hover{
+.add-event:hover {
   cursor: pointer;
-  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 10px 10px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.24), 0 10px 10px 0 rgba(0, 0, 0, 0.19);
   background-color: rgb(0, 255, 0);
 }
 
-#close:hover{
+#close:hover {
   background-color: red;
 }
 
-.add-form{
+.add-form {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-#submit-add{
+#submit-add {
   margin-top: 20px
 }
 
-form.add-form > label, form.add-form > input{
+form.add-form>label,
+form.add-form>input {
   margin-top: 10px
 }
 
-.event-details{
+.event-details {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#update-event{
-  margin-top:20px;
+#update-event {
+  margin-top: 20px;
   align-self: flex-end;
   margin-right: 400px;
   border-radius: 10px;
@@ -178,13 +184,13 @@ form.add-form > label, form.add-form > input{
   transition-duration: 0.4s;
 }
 
-#update-event:hover{
+#update-event:hover {
   background-color: orange;
   cursor: pointer;
 }
 
-#delete-event{
-  margin-top:10px;
+#delete-event {
+  margin-top: 10px;
   align-self: flex-end;
   margin-right: 400px;
   border-radius: 10px;
@@ -195,12 +201,12 @@ form.add-form > label, form.add-form > input{
   transition-duration: 0.4s;
 }
 
-#delete-event:hover{
+#delete-event:hover {
   background-color: red;
   cursor: pointer;
 }
 
-.comment{
+.comment {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -214,63 +220,64 @@ form.add-form > label, form.add-form > input{
   border-radius: 100px;
 }
 
-.event-details > h1 {
+.event-details>h1 {
   text-decoration: underline;
 }
 
-.update-form{
+.update-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 20px;
 }
 
-.update-form > label, .update-form > input{
+.update-form>label,
+.update-form>input {
   margin-top: 10px
 }
 
-.update-form > button {
+.update-form>button {
   margin-top: 20px;
 }
 
-.update-form > label {
+.update-form>label {
   font-weight: bold;
   text-decoration: underline;
 }
 
-.update-form > input {
+.update-form>input {
   transition-duration: 0.3s;
   padding: 8px;
   font-size: 20px;
 }
 
-.update-form > input:focus{
+.update-form>input:focus {
   border: 3px solid black;
 }
 
-#close-two:hover{
+#close-two:hover {
   background-color: red;
 }
 
-#close-two{
+#close-two {
   margin-top: 15px;
   margin-left: 1000px;
 }
 
-.comment-label{
+.comment-label {
   margin-left: 20px;
   margin-bottom: 30px
 }
 
-#update-user{
+#update-user {
   margin-top: 20px
 }
 
-#update-user:hover{
+#update-user:hover {
   background-color: orange;
 }
 
-.profile-info{
+.profile-info {
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -278,31 +285,33 @@ form.add-form > label, form.add-form > input{
   align-items: center;
 }
 
-.profile-update{
+.profile-update {
   display: flex;
   flex-direction: row;
   margin-right: 20px;
   padding: 40px;
 }
 
-.profile-update > label, .profile-update > input, .profile-update > button{
+.profile-update>label,
+.profile-update>input,
+.profile-update>button {
   margin-left: 10px;
 }
 
-.profile-update > label {
+.profile-update>label {
   margin-top: 30px;
   font-weight: bold;
 }
 
-.profile-update > input {
+.profile-update>input {
   padding-left: 5px;
   font-size: 20px;
 }
 
-#update-user:hover{
+#update-user:hover {
   background-color: orange;
 }
 
-#update-user{
+#update-user {
   margin-bottom: 30px
 }

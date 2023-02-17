@@ -1,7 +1,7 @@
 const { Comment, Event, User } = require('../models')
 
 const getAllEvents = async (req, res) => {
-    try{
+    try {
         const events = await Event.find()
         return res.status(200).json({ events })
     } catch (e) {
@@ -10,7 +10,7 @@ const getAllEvents = async (req, res) => {
 }
 
 const createEvent = async (req, res) => {
-    try{
+    try {
         const { userId } = req.params
         req.body = { ...req.body, user_id: userId }
         const event = await new Event(req.body)
@@ -23,17 +23,17 @@ const createEvent = async (req, res) => {
     }
 }
 
-const updateEvent = async (req,res) => {
-    try{
-        const event = await Event.findByIdAndUpdate(req.params.eventId, req.body, {new: true})
+const updateEvent = async (req, res) => {
+    try {
+        const event = await Event.findByIdAndUpdate(req.params.eventId, req.body, { new: true })
         res.status(200).json(event)
     } catch (error) {
         return res.status(500).send(error.message)
     }
 }
 
-const deleteEvent = async (req,res) => {
-    try{
+const deleteEvent = async (req, res) => {
+    try {
         const { eventId } = req.params
         const deleted = await Event.findByIdAndDelete(eventId)
         if (deleted) {
@@ -45,8 +45,8 @@ const deleteEvent = async (req,res) => {
     }
 }
 
-const getEventById = async (req,res) => {
-    try{
+const getEventById = async (req, res) => {
+    try {
         const { eventId } = req.params
         const event = await Event.findById(eventId)
         if (event) {
@@ -58,8 +58,8 @@ const getEventById = async (req,res) => {
     }
 }
 
-const getEventComments = async (req,res) => {
-    try{
+const getEventComments = async (req, res) => {
+    try {
         const { eventId } = req.params
         const comments = await Comment.find({ event_id: eventId })
         if (comments) {
@@ -72,7 +72,7 @@ const getEventComments = async (req,res) => {
 }
 
 const createComment = async (req, res) => {
-    try{
+    try {
         const { eventId, userId } = req.params
         req.body = { ...req.body, event_id: eventId, user_id: userId }
         const comment = await new Comment(req.body)
@@ -86,16 +86,16 @@ const createComment = async (req, res) => {
 }
 
 const updateComment = async (req, res) => {
-    try{
-        const comment = await Comment.findByIdAndUpdate(req.params.commentId, req.body, {new: true})
+    try {
+        const comment = await Comment.findByIdAndUpdate(req.params.commentId, req.body, { new: true })
         res.status(200).json(comment)
     } catch (error) {
         return res.status(500).send(error.message)
     }
 }
 
-const deleteComment = async (req,res) => {
-    try{
+const deleteComment = async (req, res) => {
+    try {
         const { commentId } = req.params
         const deleted = await Comment.findByIdAndDelete(commentId)
         if (deleted) {
@@ -107,8 +107,8 @@ const deleteComment = async (req,res) => {
     }
 }
 
-const getUser = async (req,res) => {
-    try{
+const getUser = async (req, res) => {
+    try {
         const { userId } = req.params
         const user = await User.findById(userId)
         if (user) {
@@ -120,21 +120,21 @@ const getUser = async (req,res) => {
     }
 }
 
-const getUserByUsername = async (req,res) => {
-    try{
+const getUserByUsername = async (req, res) => {
+    try {
         const { username } = req.params
-        const result = await User.findOne({username: `${username}`})
+        const result = await User.findOne({ username: `${username}` })
         if (result) {
-            return res.status(200).json({result})
+            return res.status(200).json({ result })
         }
         return res.status(404).send(error.message)
-    } catch(error) {
+    } catch (error) {
         return res.status(500).send(error.message)
     }
 }
 
 const createUser = async (req, res) => {
-    try{
+    try {
         const user = await new User(req.body)
         await user.save()
         return res.status(201).json({
@@ -145,8 +145,8 @@ const createUser = async (req, res) => {
     }
 }
 
-const deleteUser = async (req,res) => {
-    try{
+const deleteUser = async (req, res) => {
+    try {
         const { userId } = req.params
         const deleted = await User.findByIdAndDelete(userId)
         if (deleted) {
@@ -158,9 +158,9 @@ const deleteUser = async (req,res) => {
     }
 }
 
-const updateUser = async (req,res) => {
-    try{
-        const user = await User.findByIdAndUpdate(req.params.userId, req.body, {new: true})
+const updateUser = async (req, res) => {
+    try {
+        const user = await User.findByIdAndUpdate(req.params.userId, req.body, { new: true })
         res.status(200).json(user)
     } catch (error) {
         return res.status(500).send(error.message)

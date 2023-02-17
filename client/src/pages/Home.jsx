@@ -20,14 +20,14 @@ const Home = () => {
       <NavBar />
       <h1 className="welcome">Welcome to the dashboard, {localStorage.getItem("username")}</h1>
       <div className="home">
-      {clicked ? (<button id="close" className="add-event" onClick={() => handleClick()}>Close</button>) :
-        (<button id="add" className="add-event"onClick={() => handleClick()}>Add Event</button>)}
+        {clicked ? (<button id="close" className="add-event" onClick={() => handleClick()}>Close</button>) :
+          (<button id="add" className="add-event" onClick={() => handleClick()}>Add Event</button>)}
 
-      <div>
-        {clicked ? (
-          <EventAddForm />
-        ) : <EventList />}
-      </div>
+        <div>
+          {clicked ? (
+            <EventAddForm />
+          ) : <EventList />}
+        </div>
       </div>
 
     </div>

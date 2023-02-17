@@ -18,10 +18,4 @@ router.put('/comments/:id', controllers.updateComment)
 router.delete('/comments/:id', controllers.deleteComment)
 router.post('/events/:eventId/comments/:userId', controllers.createComment)
 
-
-
-
-
-
-
 module.exports = router

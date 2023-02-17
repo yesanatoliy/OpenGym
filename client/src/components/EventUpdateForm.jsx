@@ -30,37 +30,37 @@ const EventUpdateForm = (props) => {
             { ...formState, [e.target.id]: e.target.value }
         )
     }
-    
-    if (updateStatus === false){
-    return (
-        
-        <form className="update-form" onSubmit={handleSubmit}>
-            <label htmlFor='name'>Name</label>
-            <input type="text" id='name' onChange={handleChange} value={formState.name} />
-            <label htmlFor="address">Address</label>
-            <input type="text" id="address" onChange={handleChange} value={formState.address} />
-            <label htmlFor="cost">Cost</label>
-            <input type="text" id="cost" onChange={handleChange} value={formState.cost} />
-            <label htmlFor='level'>Level</label>
-            <input type="text" id='level' onChange={handleChange} value={formState.level} />
-            <label htmlFor="contact">Contact</label>
-            <input type="text" id="contact" onChange={handleChange} value={formState.contact} />
-            <label htmlFor="date">Date</label>
-            <input type="text" id="date" onChange={handleChange} value={formState.date} />
-            <label htmlFor='time'>Time</label>
-            <input type="text" id='time' onChange={handleChange} value={formState.time} />
-            <label htmlFor="description">Description</label>
-            <input type="text" id="description" onChange={handleChange} value={formState.description} />
-            <button id="update-event" className="add-event" type="submit">Update Event</button>
-        </form>
-    )
-}
-else {
-    return (
-    <div>
-        Updated!
-    </div>)
-}
+
+    if (updateStatus === false) {
+        return (
+
+            <form className="update-form" onSubmit={handleSubmit}>
+                <label htmlFor='name'>Name</label>
+                <input type="text" id='name' onChange={handleChange} value={formState.name} />
+                <label htmlFor="address">Address</label>
+                <input type="text" id="address" onChange={handleChange} value={formState.address} />
+                <label htmlFor="cost">Cost</label>
+                <input type="text" id="cost" onChange={handleChange} value={formState.cost} />
+                <label htmlFor='level'>Level</label>
+                <input type="text" id='level' onChange={handleChange} value={formState.level} />
+                <label htmlFor="contact">Contact</label>
+                <input type="text" id="contact" onChange={handleChange} value={formState.contact} />
+                <label htmlFor="date">Date</label>
+                <input type="text" id="date" onChange={handleChange} value={formState.date} />
+                <label htmlFor='time'>Time</label>
+                <input type="text" id='time' onChange={handleChange} value={formState.time} />
+                <label htmlFor="description">Description</label>
+                <input type="text" id="description" onChange={handleChange} value={formState.description} />
+                <button id="update-event" className="add-event" type="submit">Update Event</button>
+            </form>
+        )
+    }
+    else {
+        return (
+            <div>
+                Updated!
+            </div>)
+    }
 }
 
 export default EventUpdateForm

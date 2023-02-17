@@ -17,9 +17,8 @@ const ProfileUpdateForm = () => {
     const getUser = async () => {
         let result = await axios.get(`/api/profile/${userId}`)
         setProfile(result.data.user)
-        console.log(profile)
     }
-    
+
     useEffect(() => {
         getUser()
     }, [])
@@ -32,8 +31,6 @@ const ProfileUpdateForm = () => {
         }
         setFormState(initialState)
     }, [profile])
-
-    console.log(profile)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -49,6 +46,7 @@ const ProfileUpdateForm = () => {
             { ...formState, [e.target.id]: e.target.value }
         )
     }
+    
     return (
         <div>
             <NavBar />
