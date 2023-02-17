@@ -36,12 +36,17 @@ OpenGym is an website for volleyball players to find information about local eve
 - [ ] Add images to buttons instead of text
 - [ ] Button collection
 - [ ] More enticing signup page, include preview of site?
+- [ ] Sleeker favicon.ico
+- [ ] Add images to navbar
+- [ ] Dark theme
 - [x] Completed Update
 - [x] ~~Strikethrough~~ Items Also
 ***
 ### ***Credits***
 
-Food Images: [wiki search](https://en.wikipedia.org/wiki/File:Good_Food_Display_-_NCI_Visuals_Online.jpg) , [google search](https://www.britannica.com/topic/food)
+Volleyball Images: [istock clipart](https://www.istockphoto.com/illustrations/black-and-white-volleyball-net) , [unsplash.com search](https://images.unsplash.com/photo-1553005746-9245ba190489?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)
+
+Favicon generator: [favicon.io](https://favicon.io/favicon-converter/)
 
 CSS Guides: [w3 schools css guide](https://www.w3schools.com/css/default.asp)
 
