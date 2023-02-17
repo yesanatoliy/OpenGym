@@ -8,13 +8,16 @@ OpenGym is an website for volleyball players to find information about local eve
 
 ***
 ### ***Technologies Used***
-* Item 1
-* Item 2
-    * Sub-Item
-
-1. Item 1
-2. Item 2
-    * Sub-Item
+* React
+    * JSX
+* Express
+* JavaScript
+* MongoDB
+    * Mongo Atlas
+    * Mongo Compass
+    * Insomnia
+* CSS
+* HTML
 ***
 ### ***Screenshots***
 
