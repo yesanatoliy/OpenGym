@@ -57,7 +57,7 @@ const EventAddForm = () => {
       <input type="text" id='time' onChange={handleChange} value={formState.time} />
       <label htmlFor="description">Description</label>
       <input type="text" id="description" onChange={handleChange} value={formState.description} />
-      <button type="submit">Add Event</button>
+      <button className="add-event" type="submit">Add Event</button>
     </form>
   )
 }
