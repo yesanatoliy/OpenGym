@@ -24,7 +24,7 @@ OpenGym is an website for volleyball players to find information about local eve
 ![More food](https://cdn.britannica.com/36/123536-050-95CB0C6E/Variety-fruits-vegetables.jpg)
 ***
 ### ***Future Updates***
-- [ ] Future Update 1
+- [ ] Add search
 - [ ] Future Update 2
 - [x] Completed Update
 - [x] ~~Strikethrough~~ Items Also

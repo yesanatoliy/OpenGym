@@ -10,20 +10,20 @@ const NavBar = () => {
     }
   
     return (
-    <div className="nav">
-        <nav>
-            <Link to="/home">
-                <button>Home</button>
-            </Link>
+    <div>
+        <header className="nav">
+            <nav>
+                <Link to="/home">
+                    <button className="nav-button">Home</button>
+                </Link>
 
-            
-            <button onClick={handleClick}>Profile</button> 
-            
-            
-            <Link to="/search">
-                <button>Search</button>
-            </Link>
-        </nav>
+                
+                <button className="nav-button" onClick={handleClick}>Profile</button> 
+                
+                
+                
+            </nav>
+        </header>
     </div>
   )
 }

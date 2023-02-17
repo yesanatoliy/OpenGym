@@ -35,7 +35,12 @@ const LoginPage = () => {
   return (
     <div className='login'>
       <header className='login-header'><h1>Welcome to OpenGym</h1></header>
-      
+      <div className='app-description'>
+        <p className='app-description'>
+          OpenGym is an app for volleyball players of all skill levels to find information about open gym locations in their
+          local area.
+        </p>
+      </div>
     <form className='login-form' onSubmit={handleSubmit}>
       <h3>Sign up</h3>
       <label className='login-element' htmlFor='username'>Username</label>

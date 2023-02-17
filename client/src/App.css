@@ -13,8 +13,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-image: linear-gradient(to right, rgb(91, 255, 146), rgb(91, 255, 146, 0.3));
-  
+  background-image: linear-gradient(to right, rgb(91, 255, 146), rgb(91, 255, 146, 0.4));
   background-size: cover;
   padding: 10px;
   color: white
@@ -28,9 +27,44 @@ button.login-element {
   margin-top: 25px;
   background-color: rgb(91, 255, 146);
   font-weight: bold;
-  padding: 10px
+  padding: 10px;
+  border: none;
+  transition-duration: 0.35s;
+  color: white;
+}
+
+button.login-element:hover {
+  background-color: white;
+  border: 2px rgb(91, 255, 146);
+  color: black;
+  cursor: pointer
 }
 
 label.login-element {
   text-decoration: underline;
+}
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px
+}
+
+.nav-button{
+  margin-left: 150px;
+  border: none;
+  background: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px
+}
+
+.nav-button:hover {
+  cursor: pointer;
+  text-decoration: underline
+}
+
+header.nav{
+  background-image: linear-gradient(to right, rgb(91, 255, 146), rgb(91, 255, 146, 0.6));
 }
