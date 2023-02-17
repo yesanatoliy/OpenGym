@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { useNavigate, useParams } from "react-router-dom"
+import NavBar from "./NavBar"
 
 
 const ProfileUpdateForm = () => {
@@ -49,16 +50,18 @@ const ProfileUpdateForm = () => {
         )
     }
     return (
-
-        <form onSubmit={handleSubmit}>
-            <label htmlFor='username'>Username</label>
-            <input type="text" id='username' onChange={handleChange} value={formState.username || ''} />
-            <label htmlFor="email">Email</label>
-            <input type="text" id="email" onChange={handleChange} value={formState.email || ''} />
-            <label htmlFor="password">Password</label>
-            <input type="password" id="password" onChange={handleChange} value={formState.password || ''} />
-            <button type="submit">Update User</button>
-        </form>
+        <div>
+            <NavBar />
+            <form onSubmit={handleSubmit}>
+                <label htmlFor='username'>Username</label>
+                <input type="text" id='username' onChange={handleChange} value={formState.username || ''} />
+                <label htmlFor="email">Email</label>
+                <input type="text" id="email" onChange={handleChange} value={formState.email || ''} />
+                <label htmlFor="password">Password</label>
+                <input type="password" id="password" onChange={handleChange} value={formState.password || ''} />
+                <button type="submit">Update User</button>
+            </form>
+        </div>
     )
 }
 

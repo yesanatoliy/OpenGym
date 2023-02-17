@@ -227,3 +227,19 @@ form.add-form > label, form.add-form > input{
   margin-left: 20px;
   margin-bottom: 30px
 }
+
+#update-user{
+  margin-top: 20px
+}
+
+#update-user:hover{
+  background-color: orange;
+}
+
+.profile-info{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

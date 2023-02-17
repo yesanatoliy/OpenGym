@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useParams, useNavigate} from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import NavBar from "../components/NavBar"
 
@@ -11,16 +11,11 @@ const ProfilePage = () => {
 
   const { user } = useParams()
   const [profile, setProfile] = useState({})
-  const [clicked, toggleClicked] = useState(false)
 
   const handleClick = () => {
-    if (clicked === false) {
-       navigate(`/profile/update/${profile._id}`)
-    } else {
-      toggleClicked(false)
-    }
+    navigate(`/profile/update/${profile._id}`)
   }
-  
+
   const getUser = async () => {
     const result = await axios.get(`/api/user/${user}`)
     setProfile(result.data.result)
@@ -33,16 +28,12 @@ const ProfilePage = () => {
   return (
     <div>
       <NavBar />
-      {clicked ? (<div>
-        <button onClick={() => handleClick()}>Close</button>
-      </div>) :
-        (<div>
-          <button onClick={() => handleClick()}>Update User</button>
-          <h3>{profile.username}</h3>
-          <h3>{profile.email}</h3>
-          <h3>{profile.password}</h3>
-        </div>)}
-      
+      <div className="profile-info">
+        <h3>Profile name: {profile.username}</h3>
+        <h3>Email: {profile.email}</h3>
+        <h3>Password: {profile.password}</h3>
+        <button className="add-event" id="update-user" onClick={() => handleClick()}>Update User</button>
+      </div>
     </div>
   )
 }
