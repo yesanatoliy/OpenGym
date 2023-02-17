@@ -243,3 +243,28 @@ form.add-form > label, form.add-form > input{
   justify-content: center;
   align-items: center;
 }
+
+.profile-update{
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+  padding: 40px;
+}
+
+.profile-update > label, .profile-update > input, .profile-update > button{
+  margin-left: 10px;
+}
+
+.profile-update > label {
+  margin-top: 14px;
+  font-weight: bold;
+}
+
+.profile-update > input {
+  padding-left: 5px;
+  font-size: 20px;
+}
+
+#update-user:hover{
+  background-color: orange;
+}
