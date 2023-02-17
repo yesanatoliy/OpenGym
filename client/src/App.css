@@ -106,12 +106,10 @@ header.nav{
   cursor: pointer;
   box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 10px 10px 0 rgba(0,0,0,0.19);
   background-color: rgb(0, 255, 0);
-  color: black;
 }
 
 #close:hover{
   background-color: red;
-  color: black;
 }
 
 .add-form{
@@ -147,8 +145,7 @@ form.add-form > label, form.add-form > input{
 }
 
 #update-event:hover{
-  background-color: yellow;
-  color: black;
+  background-color: orange;
   cursor: pointer;
 }
 
@@ -167,7 +164,6 @@ form.add-form > label, form.add-form > input{
 #delete-event:hover{
   background-color: red;
   cursor: pointer;
-  color: black;
 }
 
 .comment{
@@ -186,4 +182,48 @@ form.add-form > label, form.add-form > input{
 
 .event-details > h1 {
   text-decoration: underline;
+}
+
+.update-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+
+.update-form > label, .update-form > input{
+  margin-top: 10px
+}
+
+.update-form > button {
+  margin-top: 20px;
+}
+
+.update-form > label {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.update-form > input {
+  transition-duration: 0.3s;
+  padding: 8px;
+  font-size: 20px;
+}
+
+.update-form > input:focus{
+  border: 3px solid black;
+}
+
+#close-two:hover{
+  background-color: red;
+}
+
+#close-two{
+  margin-top: 15px;
+  margin-left: 1000px;
+}
+
+.comment-label{
+  margin-left: 20px;
+  margin-bottom: 30px
 }

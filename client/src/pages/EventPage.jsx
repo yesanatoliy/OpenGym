@@ -46,7 +46,7 @@ const EventPage = () => {
     <div>
       <NavBar />
       {clicked ? (<div>
-        <button onClick={() => handleClick()}>Close</button>
+        <button id="close-two" className='add-event' onClick={() => handleClick()}>Close</button>
         <EventUpdateForm 
         name={event.name}
         date={event.date}
@@ -61,8 +61,8 @@ const EventPage = () => {
         />
       </div>) :
         (<div className='event-details'>
-          <button id="update-event" onClick={() => handleClick()}>Update</button>
-          <button id='delete-event' onClick={() => deleteEvent()}>Delete Event</button>
+          <button className='add-event' id="update-event" onClick={() => handleClick()}>Update</button>
+          <button className='add-event' id='delete-event' onClick={() => deleteEvent()}>Delete Event</button>
           <h1>{event?.name}</h1>
           <h3>Date: {event?.date}</h3>
           <h3>Time: {event?.time}</h3>
@@ -73,7 +73,7 @@ const EventPage = () => {
           <h4>{event?.description}</h4>
         </div>)}
 
-
+      <h3 className='comment-label'>Comment Section</h3>
       {comments.map((comment) => (
         <h5 className='comment'>{comment.contents}</h5>
       ))}

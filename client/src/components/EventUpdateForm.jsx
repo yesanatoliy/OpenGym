@@ -34,7 +34,7 @@ const EventUpdateForm = (props) => {
     if (updateStatus === false){
     return (
         
-        <form onSubmit={handleSubmit}>
+        <form className="update-form" onSubmit={handleSubmit}>
             <label htmlFor='name'>Name</label>
             <input type="text" id='name' onChange={handleChange} value={formState.name} />
             <label htmlFor="address">Address</label>
@@ -51,7 +51,7 @@ const EventUpdateForm = (props) => {
             <input type="text" id='time' onChange={handleChange} value={formState.time} />
             <label htmlFor="description">Description</label>
             <input type="text" id="description" onChange={handleChange} value={formState.description} />
-            <button type="submit">Update Event</button>
+            <button id="update-event" className="add-event" type="submit">Update Event</button>
         </form>
     )
 }
