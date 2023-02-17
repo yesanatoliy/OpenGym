@@ -22,9 +22,9 @@ OpenGym is an website for volleyball players to find information about local eve
 ### ***Screenshots***
 
 #### **image header 1**
-![Food](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/1599px-Good_Food_Display_-_NCI_Visuals_Online.jpg)
+![Login](./screenshots/OpenGym-Login.png)
 
-![More food](https://cdn.britannica.com/36/123536-050-95CB0C6E/Variety-fruits-vegetables.jpg)
+![Event page](./screenshots/OpenGym-Event.png)
 ***
 ### ***Future Updates***
 - [ ] CRUD for every entity
