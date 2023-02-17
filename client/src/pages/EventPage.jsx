@@ -60,23 +60,24 @@ const EventPage = () => {
         getEvent={getEvent}
         />
       </div>) :
-        (<div>
-          <button onClick={() => handleClick()}>Update Event</button>
+        (<div className='event-details'>
+          <button id="update-event" onClick={() => handleClick()}>Update</button>
+          <button id='delete-event' onClick={() => deleteEvent()}>Delete Event</button>
           <h1>{event?.name}</h1>
-          <h3>{event?.date}</h3>
-          <h3>{event?.time}</h3>
-          <h3>{event?.address}</h3>
-          <h3>{event?.level}</h3>
-          <h3>{event?.cost}</h3>
-          <h3>{event?.contact}</h3>
+          <h3>Date: {event?.date}</h3>
+          <h3>Time: {event?.time}</h3>
+          <h3>Address: {event?.address}</h3>
+          <h3>Skill Level: {event?.level}</h3>
+          <h3>Entry cost: {event?.cost}</h3>
+          <h3>Contact: {event?.contact}</h3>
           <h4>{event?.description}</h4>
         </div>)}
 
 
       {comments.map((comment) => (
-        <h6>{comment.contents}</h6>
+        <h5 className='comment'>{comment.contents}</h5>
       ))}
-      <button onClick={() => deleteEvent()}>Delete Event</button>
+      
     </div>
   )
 }

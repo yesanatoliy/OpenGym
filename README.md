@@ -28,6 +28,10 @@ OpenGym is an website for volleyball players to find information about local eve
 - [ ] Add profile pictures
 - [ ] Add event pictures
 - [ ] Add login option
+- [ ] Only render events that have not occured yet
+- [ ] Add confirm prompts for important updates or deletes
+- [ ] Attach username and icon next to their comments and their events
+- [ ] True user authentication
 - [x] Completed Update
 - [x] ~~Strikethrough~~ Items Also
 ***
