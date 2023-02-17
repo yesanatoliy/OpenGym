@@ -33,15 +33,20 @@ const LoginPage = () => {
   
   
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor='username'>Username</label>
-      <input type="text" id='username' onChange={handleChange} value={formState.username}></input>
-      <label htmlFor="email">Email</label>
-      <input type="text" id="email" onChange={handleChange} value={formState.email} />
-      <label htmlFor="password">Password</label>
-      <input type="text" id="password" onChange={handleChange} value={formState.password} />
-      <button type="submit">Sign Up</button>
+    <div className='login'>
+      <header className='login-header'><h1>Welcome to OpenGym</h1></header>
+      
+    <form className='login-form' onSubmit={handleSubmit}>
+      <h3>Sign up</h3>
+      <label className='login-element' htmlFor='username'>Username</label>
+      <input className='login-element' type="text" id='username' onChange={handleChange} value={formState.username}></input>
+      <label className='login-element' htmlFor="email">Email</label>
+      <input className='login-element' type="text" id="email" onChange={handleChange} value={formState.email} />
+      <label className='login-element' htmlFor="password">Password</label>
+      <input type="password" id="password" className='login-element' onChange={handleChange} value={formState.password} />
+      <button className='login-element' type="submit">Sign Up</button>
     </form>
+    </div>
   )
 }
 
