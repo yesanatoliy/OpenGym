@@ -25,7 +25,9 @@ OpenGym is an website for volleyball players to find information about local eve
 ***
 ### ***Future Updates***
 - [ ] Add search
-- [ ] Future Update 2
+- [ ] Add profile pictures
+- [ ] Add event pictures
+- [ ] Add login option
 - [x] Completed Update
 - [x] ~~Strikethrough~~ Items Also
 ***

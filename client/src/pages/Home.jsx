@@ -18,7 +18,8 @@ const Home = () => {
   return (
     <div>
       <NavBar />
-      <h1>Welcome, {localStorage.getItem("username")}</h1>
+      <h1 className="welcome">Welcome, {localStorage.getItem("username")}</h1>
+      <div className="home">
       {clicked ? (<button onClick={() => handleClick()}>Close</button>) :
         (<button onClick={() => handleClick()}>Add Event</button>)}
 
@@ -27,7 +28,7 @@ const Home = () => {
           <EventAddForm />
         ) : <EventList />}
       </div>
-
+      </div>
 
     </div>
   )

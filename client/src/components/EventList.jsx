@@ -18,7 +18,7 @@ const EventList = () => {
     
 
   return (
-    <div>
+    <div className="event">
         {
             events.map((event) => (
                 <Event 

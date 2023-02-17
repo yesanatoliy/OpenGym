@@ -47,24 +47,49 @@ label.login-element {
 .nav{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 20px
 }
 
 .nav-button{
-  margin-left: 150px;
+  margin-left: 100px;
   border: none;
   background: none;
   color: white;
   font-weight: bold;
-  font-size: 20px
+  font-size: 20px;
+  transition-duration: 0.2s;
+  text-decoration: underline;
 }
 
 .nav-button:hover {
   cursor: pointer;
-  text-decoration: underline
+  text-decoration: none;
 }
 
 header.nav{
   background-image: linear-gradient(to right, rgb(91, 255, 146), rgb(91, 255, 146, 0.6));
 }
+
+.welcome{
+  text-align: center;
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px
+}
+
+.event{
+  text-align: center;
+}
+
+.event-post{
+  border: ridge 2px;
+  margin-top: 20px;
+  padding: 35px 80px;
+  border-radius: 30px
+}
+
