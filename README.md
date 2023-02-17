@@ -4,7 +4,7 @@
 #### [GitHub](https://github.com/yesanatoliy) | [LinkedIn](https://www.linkedin.com/in/anatoliy-agadzhanov-5a2a54173/)
 ***
 ### ***Description***
-OpenGym is an website for volleyball players to find information about local events where they can sign up to play volleyball! Players who run these events can use OpenGym to create and promote their events.
+OpenGym is an website for volleyball players to find information about local events where they can sign up to play volleyball! Players who run these events can also use OpenGym to create event listings to promote their events.
 
 ***
 ### ***Technologies Used***
@@ -49,5 +49,3 @@ Volleyball Images: [istock clipart](https://www.istockphoto.com/illustrations/bl
 Favicon generator: [favicon.io](https://favicon.io/favicon-converter/)
 
 CSS Guides: [w3 schools css guide](https://www.w3schools.com/css/default.asp)
-
-Markdown Cheatsheet: [GitHub](github.com)
