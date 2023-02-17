@@ -27,6 +27,7 @@ OpenGym is an website for volleyball players to find information about local eve
 ![More food](https://cdn.britannica.com/36/123536-050-95CB0C6E/Variety-fruits-vegetables.jpg)
 ***
 ### ***Future Updates***
+- [ ] CRUD for every entity
 - [ ] Add search
 - [ ] Add profile pictures
 - [ ] Add event pictures
@@ -42,8 +43,8 @@ OpenGym is an website for volleyball players to find information about local eve
 - [ ] Sleeker favicon.ico
 - [ ] Add images to navbar
 - [ ] Dark theme
-- [x] Completed Update
-- [x] ~~Strikethrough~~ Items Also
+- [ ] Show comments button on events and add comments button on event list
+- [ ] More animations
 ***
 ### ***Credits***
 
@@ -51,4 +52,4 @@ Volleyball Images: [istock clipart](https://www.istockphoto.com/illustrations/bl
 
 Favicon generator: [favicon.io](https://favicon.io/favicon-converter/)
 
-CSS Guides: [w3 schools css guide](https://www.w3schools.com/css/default.asp)
+CSS Guides: [w3 schools css guide](https://www.w3schools.com/css/default.asp), [w3 schools css animations guide](https://www.w3schools.com/css/css3_animations.asp)
