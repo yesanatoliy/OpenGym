@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 
 const EventAddForm = () => {
-  
+
   const initialState = {
     name: '',
     address: '',
@@ -15,7 +15,7 @@ const EventAddForm = () => {
   }
   const [formState, setFormState] = useState(initialState)
   const [user, setUser] = useState({})
-  
+
   const getUser = async () => {
     const result = await axios.get(`/api/user/${localStorage.getItem('username')}`)
     setUser(result.data.result)
@@ -40,8 +40,9 @@ const EventAddForm = () => {
     )
   }
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor='name'>Name</label>
+
+    <form className="add-form" onSubmit={handleSubmit}>
+      <label htmlFor='name'>Event Name</label>
       <input type="text" id='name' onChange={handleChange} value={formState.name} />
       <label htmlFor="address">Address</label>
       <input type="text" id="address" onChange={handleChange} value={formState.address} />
@@ -57,8 +58,9 @@ const EventAddForm = () => {
       <input type="text" id='time' onChange={handleChange} value={formState.time} />
       <label htmlFor="description">Description</label>
       <input type="text" id="description" onChange={handleChange} value={formState.description} />
-      <button className="add-event" type="submit">Add Event</button>
+      <button id="submit-add" className="add-event" type="submit">Submit</button>
     </form>
+
   )
 }
 

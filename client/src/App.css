@@ -112,3 +112,17 @@ header.nav{
   background-color: red;
 }
 
+.add-form{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#submit-add{
+  margin-top: 20px
+}
+
+form.add-form > label, form.add-form > input{
+  margin-top: 10px
+}
+
