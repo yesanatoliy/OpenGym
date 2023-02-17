@@ -35,6 +35,7 @@ OpenGym is an website for volleyball players to find information about local eve
 - [ ] Nicer font
 - [ ] Add images to buttons instead of text
 - [ ] Button collection
+- [ ] More enticing signup page, include preview of site?
 - [x] Completed Update
 - [x] ~~Strikethrough~~ Items Also
 ***
@@ -42,6 +43,6 @@ OpenGym is an website for volleyball players to find information about local eve
 
 Food Images: [wiki search](https://en.wikipedia.org/wiki/File:Good_Food_Display_-_NCI_Visuals_Online.jpg) , [google search](https://www.britannica.com/topic/food)
 
-Markdown Guide: [ia.net](ia.net)
+CSS Guides: [w3 schools css guide](https://www.w3schools.com/css/default.asp)
 
 Markdown Cheatsheet: [GitHub](github.com)

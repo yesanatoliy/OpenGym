@@ -1,3 +1,8 @@
+.login{
+  background-image: url("https://i.imgur.com/Dwg39bJ.jpg");
+  background-size: contain;
+  padding-bottom: 400px
+}
 
 .login-form{
   display: flex;
@@ -6,7 +11,8 @@
   margin: 1% 37%;
   text-align: center;
   background-color: rgba(240, 240, 255, 0.734);
-  padding: 10px
+  padding: 10px;
+  border-radius: 20px
 }
 
 .login-header{
@@ -21,6 +27,11 @@
 
 .login-element{
   margin: 10px;
+}
+
+.app-description{
+  margin: 50px;
+  text-align: center
 }
 
 button.login-element {
@@ -73,6 +84,12 @@ header.nav{
 
 .welcome{
   text-align: center;
+  background-color: rgba(211, 215, 217, 0.168);
+  color: rgb(100, 100, 100);
+  padding: 20px;
+  border-radius: 20px;
+  width: 50%;
+  margin: 20px auto
 }
 
 .home{
@@ -256,7 +273,7 @@ form.add-form > label, form.add-form > input{
 }
 
 .profile-update > label {
-  margin-top: 14px;
+  margin-top: 30px;
   font-weight: bold;
 }
 
@@ -267,4 +284,8 @@ form.add-form > label, form.add-form > input{
 
 #update-user:hover{
   background-color: orange;
+}
+
+#update-user{
+  margin-bottom: 30px
 }
