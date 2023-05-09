@@ -1,4 +1,5 @@
 const { Comment, Event, User } = require('../models')
+const middleware = require('../middleware')
 
 const getAllEvents = async (req, res) => {
     try {
@@ -135,7 +136,9 @@ const getUserByUsername = async (req, res) => {
 
 const createUser = async (req, res) => {
     try {
-        const user = await new User(req.body)
+        const { email, username, password } = req.body
+        const passwordDigest = await middleware.hashPassword(password)
+        const user = await new User({ email, username, passwordDigest })
         await user.save()
         return res.status(201).json({
             user
