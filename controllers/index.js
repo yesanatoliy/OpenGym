@@ -148,6 +148,28 @@ const createUser = async (req, res) => {
     }
 }
 
+const signIn = async (req, res) => {
+    try {
+        const user = await User.findOne({ email: `${req.body.email}` })
+        let matched = await middleware.comparePassword(
+            user.passwordDigest,
+            req.body.password
+        )
+        if (matched) {
+            let payload = {
+              id: user._id,
+              email: user.email,
+              name: user.username,
+            }
+            let token = middleware.createToken(payload)
+            return res.send({ user: payload, token })
+        }
+        // res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
+    } catch (error) {
+        throw error
+    }
+}
+
 const deleteUser = async (req, res) => {
     try {
         const { userId } = req.params
@@ -184,5 +206,6 @@ module.exports = {
     getUserByUsername,
     createUser,
     deleteUser,
-    updateUser
+    updateUser,
+    signIn
 }
