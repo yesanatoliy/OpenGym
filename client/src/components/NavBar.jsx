@@ -13,8 +13,8 @@ const NavBar = () => {
         <div>
             <header className="nav">
                 <nav>
-                    <Link to="/home">
-                        <button className="nav-button">Home</button>
+                    <Link to="/login">
+                        <button className="nav-button">Sign Up</button>
                     </Link>
 
 
