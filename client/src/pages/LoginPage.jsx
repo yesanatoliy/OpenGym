@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from "react-router-dom"
+import { SignInUser } from '../services/Auth'
 
-const LoginPage = () => {
+const LoginPage = (props) => {
   const navigate = useNavigate()
 
   const initialState = {
@@ -15,10 +16,8 @@ const LoginPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post('/api/user', formState)
-    localStorage.setItem(
-      "username", `${formState.username}`
-    )
+    const payload = await SignInUser(formState)
+    props.setUser(payload)
     setFormState(initialState)
     navigate(`/`)
   }
