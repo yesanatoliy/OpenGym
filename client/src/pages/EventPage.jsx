@@ -57,6 +57,7 @@ const EventPage = () => {
           contact={event.contact}
           description={event.description}
           id={event._id}
+          imageUrl={event.imageUrl}
           getEvent={getEvent}
         />
       </div>) :

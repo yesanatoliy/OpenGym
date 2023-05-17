@@ -11,7 +11,8 @@ const EventUpdateForm = (props) => {
         contact: props.contact,
         date: props.date,
         time: props.time,
-        description: props.description
+        description: props.description,
+        imageUrl: props.imageUrl
     }
 
     const [formState, setFormState] = useState(initialState)
@@ -51,7 +52,10 @@ const EventUpdateForm = (props) => {
                 <input type="text" id='time' onChange={handleChange} value={formState.time} />
                 <label htmlFor="description">Description</label>
                 <input type="text" id="description" onChange={handleChange} value={formState.description} />
+                <label htmlFor="image-url">Image</label>
+                <input type="text" id="image-url" onChange={handleChange} value={formState.imageUrl} />
                 <button id="update-event" className="add-event" type="submit">Update Event</button>
+                
             </form>
         )
     }

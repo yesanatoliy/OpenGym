@@ -20,7 +20,7 @@ const LoginPage = () => {
       "username", `${formState.username}`
     )
     setFormState(initialState)
-    navigate(`/home`)
+    navigate(`/`)
   }
 
   const handleChange = (e) => {
