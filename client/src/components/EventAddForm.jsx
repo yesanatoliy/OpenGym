@@ -11,7 +11,8 @@ const EventAddForm = () => {
     contact: '',
     date: '',
     time: '',
-    description: ''
+    description: '',
+    imageUrl: ''
   }
   const [formState, setFormState] = useState(initialState)
   const [user, setUser] = useState({})
@@ -58,8 +59,8 @@ const EventAddForm = () => {
       <input type="text" id='time' onChange={handleChange} value={formState.time} />
       <label htmlFor="description">Description</label>
       <input type="text" id="description" onChange={handleChange} value={formState.description} />
-      <label htmlFor="image-url">Image</label>
-      <input type="text" id="image-url" onChange={handleChange} value={formState.imageUrl} />
+      <label htmlFor="imageUrl">Image</label>
+      <input type="text" id="imageUrl" onChange={handleChange} value={formState.imageUrl} />
       <button id="submit-add" className="add-event" type="submit">Submit</button>
     </form>
 
