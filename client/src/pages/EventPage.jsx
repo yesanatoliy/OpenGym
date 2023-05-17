@@ -33,7 +33,7 @@ const EventPage = () => {
 
   const deleteEvent = async () => {
     await axios.delete(`/api/events/${eventId}`)
-    navigate('/home')
+    navigate('/')
   }
 
 
