@@ -2,9 +2,9 @@ import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import EventUpdateForm from '../components/EventUpdateForm'
-import NavBar from '../components/NavBar'
 
-const EventPage = () => {
+
+const EventPage = (props) => {
   const navigate = useNavigate()
 
   const [event, setEvent] = useState({})
@@ -42,9 +42,11 @@ const EventPage = () => {
     getComments()
   }, [])
 
-  return (
-    <div>
-      <NavBar />
+  if (props.user) {
+
+    return (
+      <div>
+      
       {clicked ? (<div>
         <button id="close-two" className='add-event' onClick={() => handleClick()}>Close</button>
         <EventUpdateForm
@@ -59,7 +61,7 @@ const EventPage = () => {
           id={event._id}
           imageUrl={event.imageUrl}
           getEvent={getEvent}
-        />
+          />
       </div>) :
         (<div className='event-details'>
           <button className='add-event' id="update-event" onClick={() => handleClick()}>Update</button>
@@ -78,10 +80,37 @@ const EventPage = () => {
       <h3 className='comment-label'>Comment Section</h3>
       {comments.map((comment) => (
         <h5 className='comment'>{comment.contents}</h5>
-      ))}
+        ))}
       
     </div>
   )
+}
+else {
+  return(
+    <div>
+      
+      
+
+        <div className='event-details'>
+          <h1>{event?.name}</h1>
+          <img src={event?.imageUrl} alt="Gym image" />
+          <h3>Date: {event?.date}</h3>
+          <h3>Time: {event?.time}</h3>
+          <h3>Address: {event?.address}</h3>
+          <h3>Skill Level: {event?.level}</h3>
+          <h3>Entry cost: {event?.cost}</h3>
+          <h3>Contact: {event?.contact}</h3>
+          <h4>{event?.description}</h4>
+        </div>
+
+      <h3 className='comment-label'>Comment Section</h3>
+      {comments.map((comment) => (
+        <h5 className='comment'>{comment.contents}</h5>
+        ))}
+      
+    </div>
+  )
+}
 }
 
 export default EventPage

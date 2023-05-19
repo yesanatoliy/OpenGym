@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom'
 import ProfileUpdateForm from './components/ProfileUpdateForm'
 import { useState, useEffect } from 'react'
 import { CheckSession } from './services/Auth'
+import NavBar from './components/NavBar'
 
 function App() {
   const [user, setUser] = useState(null)
@@ -25,13 +26,14 @@ function App() {
 
   return (
     <div className="App">
+      <NavBar user={user} setUser={setUser} />
       <Routes>
         <Route path="/" element={<Home user={user} />} />
         <Route path="/login" element={<LoginPage setUser={setUser} />} />
         <Route path="/profile/:user" element={<ProfilePage />} />
         <Route path="/profile/update/:userId" element={<ProfileUpdateForm />} />
         <Route path="/search" element={<Search />} />
-        <Route path="/events/:eventId" element={<EventPage />} />
+        <Route path="/events/:eventId" element={<EventPage user={user}/>} />
       </Routes>
     </div>
   );

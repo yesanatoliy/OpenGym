@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
-import NavBar from "../components/NavBar"
+
 
 
 
@@ -27,7 +27,7 @@ const ProfilePage = () => {
 
   return (
     <div>
-      <NavBar />
+      
       <div className="profile-info">
         <h3>Profile name: {profile.username}</h3>
         <h3>Email: {profile.email}</h3>

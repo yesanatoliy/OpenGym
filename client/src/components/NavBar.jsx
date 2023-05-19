@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 
-const NavBar = () => {
+const NavBar = ({setUser, user}) => {
 
     const navigate = useNavigate()
 
     const handleClick = () => {
         navigate(`/profile/${localStorage.getItem('username')}`)
     }
+    const signOut = () => {
+        localStorage.clear()
+        setUser(null)
+        navigate('/')
+      }
 
     return (
         <div>
@@ -19,6 +24,7 @@ const NavBar = () => {
 
 
                     <button className="nav-button" onClick={handleClick}>Profile</button>
+                    {user && (<button className="nav-button" onClick={() => signOut()}>Sign Out</button>)}
                 </nav>
             </header>
         </div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { useNavigate, useParams } from "react-router-dom"
-import NavBar from "./NavBar"
+
 
 
 const ProfileUpdateForm = () => {
@@ -49,7 +49,7 @@ const ProfileUpdateForm = () => {
     
     return (
         <div>
-            <NavBar />
+            
             <form className="profile-update" onSubmit={handleSubmit}>
                 <label htmlFor='username'>Username:</label>
                 <input type="text" id='username' onChange={handleChange} value={formState.username || ''} />
