@@ -18,9 +18,10 @@ const Home = (props) => {
     }
   }
 
-
-  return (
-    <div>
+  if(props.user){
+    
+    return (
+      <div>
       
       {props.user && (<h1 className="welcome">Welcome to the dashboard, {props.user.name} </h1>)}
       <div className="home">
@@ -30,12 +31,23 @@ const Home = (props) => {
         <div>
           {clicked ? (
             <EventAddForm />
-          ) : <EventList />}
+            ) : <EventList />}
         </div>
       </div>
 
     </div>
   )
+}
+else{
+  return(
+    <div className="home">
+      
+      <EventList />
+    </div>
+    
+  )
+}
+
 }
 
 export default Home
