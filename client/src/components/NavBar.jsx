@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 
-const NavBar = ({setUser, user}) => {
+const NavBar = ({ setUser, user }) => {
 
     const navigate = useNavigate()
 
@@ -12,12 +12,15 @@ const NavBar = ({setUser, user}) => {
         localStorage.clear()
         setUser(null)
         navigate('/')
-      }
+    }
 
     return (
         <div>
             <header className="nav">
                 <nav>
+                    <Link to="/">
+                        <button className="nav-button">Home</button>
+                    </Link>
                     <Link to="/login">
                         <button className="nav-button">Sign Up</button>
                     </Link>
