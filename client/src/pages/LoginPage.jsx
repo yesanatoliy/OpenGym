@@ -22,6 +22,18 @@ const LoginPage = (props) => {
     navigate(`/`)
   }
 
+  const guestSignIn = async (e) => {
+    e.preventDefault()
+    const payload = await SignInUser({
+      username: 'Guest',
+      email: 'guest@guest.com',
+      password: 'guest'
+    })
+    props.setUser(payload)
+    setFormState(initialState)
+    navigate(`/`)
+  }
+
   const handleChange = (e) => {
     setFormState(
       { ...formState, [e.target.id]: e.target.value }
