@@ -16,6 +16,12 @@ const main = async () => {
         password: '9852'
     })
     user2.save()
+    const user3 = await new User({
+        username: 'Guest',
+        email: 'guest@guest.com',
+        password: 'guest'
+    })
+    user3.save()
 
     const event1 = await new Event({
         user_id: user1._id,
