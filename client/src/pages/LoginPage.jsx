@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import axios from 'axios'
 import { useNavigate } from "react-router-dom"
 import { SignInUser } from '../services/Auth'
 
@@ -25,7 +24,6 @@ const LoginPage = (props) => {
   const guestSignIn = async (e) => {
     e.preventDefault()
     const payload = await SignInUser({
-      username: 'Guest',
       email: 'guest@guest.com',
       password: 'guest'
     })
@@ -54,8 +52,6 @@ const LoginPage = (props) => {
       </div>
       <form className='login-form' onSubmit={handleSubmit}>
         <h3>Sign up</h3>
-        <label className='login-element' htmlFor='username'>Username</label>
-        <input className='login-element' type="text" id='username' onChange={handleChange} value={formState.username}></input>
         <label className='login-element' htmlFor="email">Email</label>
         <input className='login-element' type="text" id="email" onChange={handleChange} value={formState.email} />
         <label className='login-element' htmlFor="password">Password</label>
