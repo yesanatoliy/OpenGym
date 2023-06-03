@@ -26,8 +26,15 @@ const NavBar = ({ setUser, user }) => {
                     </Link>
 
 
-                    <button className="nav-button" onClick={handleClick}>Profile</button>
-                    {user && (<button className="nav-button" onClick={() => signOut()}>Sign Out</button>)}
+                    {/* <button className="nav-button" onClick={handleClick}>Profile</button> */}
+                    {user && (
+                        <div>
+                            <button className="nav-button" onClick={handleClick}>Profile</button>
+                            <button className="nav-button" onClick={() => signOut()}>Sign Out</button>
+                            
+                        </div>)
+                    
+                    }
                 </nav>
             </header>
         </div>
