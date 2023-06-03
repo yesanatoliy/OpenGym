@@ -31,7 +31,7 @@ OpenGym is an website for volleyball players to find information about local eve
 - [ ] CRUD for every entity
 - [ ] Add search
 - [ ] Add profile pictures
-- [ ] Add event pictures
+- [x] Add event pictures
 - [ ] Add login option
 - [ ] Only render events that have not occured yet
 - [ ] Add confirm prompts for important updates or deletes
