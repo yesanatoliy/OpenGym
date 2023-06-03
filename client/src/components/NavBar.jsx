@@ -22,7 +22,7 @@ const NavBar = ({ setUser, user }) => {
                         <button className="nav-button">Home</button>
                     </Link>
                     <Link to="/login">
-                        <button className="nav-button">Sign Up</button>
+                        <button className="nav-button">Login</button>
                     </Link>
 
 
