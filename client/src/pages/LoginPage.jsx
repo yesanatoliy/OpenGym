@@ -21,7 +21,6 @@ const LoginPage = (props) => {
   }
 
   const guestSignIn = async (e) => {
-    // e.preventDefault()
     const payload = await SignInUser({
       email: 'guest@guest.com',
       password: 'guest'
@@ -52,7 +51,7 @@ const LoginPage = (props) => {
       <div className='login-form'>
 
       <form className='' onSubmit={handleSubmit}>
-        <h3>Sign up</h3>
+        <h3>Sign in</h3>
         <label className='login-element' htmlFor="email">Email</label>
         <input className='login-element' type="text" id="email" onChange={handleChange} value={formState.email} />
         <label className='login-element' htmlFor="password">Password</label>

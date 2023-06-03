@@ -18,22 +18,30 @@ const NavBar = ({ setUser, user }) => {
         <div>
             <header className="nav">
                 <nav>
-                    <Link to="/">
-                        <button className="nav-button">Home</button>
-                    </Link>
-                    <Link to="/login">
-                        <button className="nav-button">Login</button>
-                    </Link>
+
+
 
 
                     {/* <button className="nav-button" onClick={handleClick}>Profile</button> */}
-                    {user && (
+                    {user ? (
                         <div>
+                            <Link to="/">
+                                <button className="nav-button">Home</button>
+                            </Link>
                             <button className="nav-button" onClick={handleClick}>Profile</button>
                             <button className="nav-button" onClick={() => signOut()}>Sign Out</button>
-                            
-                        </div>)
-                    
+
+                        </div>) : (
+                        <div>
+                            <Link to="/">
+                                <button className="nav-button">Home</button>
+                                <Link to="/login">
+                                    <button className="nav-button">Login</button>
+                                </Link>
+                            </Link>
+                        </div>
+                    )
+
                     }
                 </nav>
             </header>
