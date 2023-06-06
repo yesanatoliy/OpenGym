@@ -34,7 +34,7 @@ const SignUp = () => {
                     local area.
                 </p>
             </div>
-            <form className='login-form' onSubmit={handleSubmit}>
+            <form className='signup-form' onSubmit={handleSubmit}>
                 <h3>Sign up</h3>
                 <label className='login-element' htmlFor='username'>Username</label>
                 <input className='login-element' type="text" id='username' onChange={handleChange} value={formState.username}></input>
