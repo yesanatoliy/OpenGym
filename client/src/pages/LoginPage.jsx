@@ -48,16 +48,16 @@ const LoginPage = (props) => {
           local area.
         </p>
       </div>
-      <div className='login-form'>
+      <div className='login-div'>
 
-      <form className='' onSubmit={handleSubmit}>
-        <h3>Sign in</h3>
-        <label className='login-element' htmlFor="email">Email</label>
-        <input className='login-element' type="text" id="email" onChange={handleChange} value={formState.email} />
-        <label className='login-element' htmlFor="password">Password</label>
-        <input type="password" id="password" className='login-element' onChange={handleChange} value={formState.password} />
-        <button className='login-element' type="submit">Login</button>
-      </form>
+        <form className='login-form' onSubmit={handleSubmit}>
+          <h3>Sign in</h3>
+          <label className='login-element' htmlFor="email">Email</label>
+          <input className='login-element' type="text" id="email" onChange={handleChange} value={formState.email} />
+          <label className='login-element' htmlFor="password">Password</label>
+          <input type="password" id="password" className='login-element' onChange={handleChange} value={formState.password} />
+          <button className='login-element' type="submit">Login</button>
+        </form>
         <button className='login-element' type="" onClick={() => guestSignIn()}>Guest login</button>
       </div>
     </div>

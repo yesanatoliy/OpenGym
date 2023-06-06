@@ -17,7 +17,7 @@
   padding-bottom: 400px
 }
 
-.login-form {
+.signup-form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -26,6 +26,20 @@
   background-color: rgba(240, 240, 255, 0.734);
   padding: 10px;
   border-radius: 20px
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.login-div {
+  background-color: rgba(240, 240, 255, 0.734);
+  text-align: center;
+  margin: 0 auto;
+  width: 20%;
+  padding: 10px;
+  border-radius: 25px;
 }
 
 .login-header {
@@ -42,7 +56,7 @@
 }
 
 .login-element {
-  margin: 10px;
+  margin: 5px auto;
 }
 
 .app-description {
