@@ -11,13 +11,14 @@ const SignUp = () => {
     }
     const [formState, setFormState] = useState(initialState)
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault()
-    //     const payload = await SignInUser(formState)
-    //     props.setUser(payload)
-    //     setFormState(initialState)
-    //     navigate(`/`)
-    //   }
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        const payload = await SignInUser(formState)
+        props.setUser(payload)
+        setFormState(initialState)
+        navigate(`/`)
+      }
+    //   wrong handlesubmit
 
       const handleChange = (e) => {
         setFormState(

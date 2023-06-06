@@ -9,6 +9,7 @@ import ProfileUpdateForm from './components/ProfileUpdateForm'
 import { useState, useEffect } from 'react'
 import { CheckSession } from './services/Auth'
 import NavBar from './components/NavBar'
+import SignUp from './pages/SignUp'
 
 function App() {
   const [user, setUser] = useState(null)
@@ -30,6 +31,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home user={user} />} />
         <Route path="/login" element={<LoginPage setUser={setUser} />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/profile/:user" element={<ProfilePage />} />
         <Route path="/profile/update/:userId" element={<ProfileUpdateForm />} />
         <Route path="/search" element={<Search />} />
