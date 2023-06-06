@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from "react-router-dom"
+import { RegisterUser } from '../services/Auth'
 
 const SignUp = () => {
     const navigate = useNavigate()
@@ -13,12 +14,11 @@ const SignUp = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const payload = await SignInUser(formState)
-        props.setUser(payload)
+        await RegisterUser(formState)
         setFormState(initialState)
-        navigate(`/`)
+        navigate(`/login`)
       }
-    //   wrong handlesubmit
+    
 
       const handleChange = (e) => {
         setFormState(

@@ -35,9 +35,12 @@ const NavBar = ({ setUser, user }) => {
                         <div>
                             <Link to="/">
                                 <button className="nav-button">Home</button>
-                                <Link to="/login">
-                                    <button className="nav-button">Login</button>
-                                </Link>
+                            </Link>
+                            <Link to="/login">
+                                <button className="nav-button">Login</button>
+                            </Link>
+                            <Link to="/signup">
+                                <button className="nav-button">Sign Up</button>
                             </Link>
                         </div>
                     )
