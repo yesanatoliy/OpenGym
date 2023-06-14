@@ -29,7 +29,7 @@ const SignUp = () => {
         <div className='login'>
             <header className='login-header'><h1>Welcome to OpenGym</h1></header>
             <div className='app-description'>
-                <p className='app-description'>
+                <p>
                     OpenGym is an app for volleyball players of all skill levels to find information about open gym locations in their
                     local area.
                 </p>
