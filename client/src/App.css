@@ -150,6 +150,13 @@ header.nav {
 
 }
 
+.add-div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 85%;
+  margin-right: 5%
+}
+
 .add-event {
   border-radius: 10px;
   background-color: #a6a6a6;
@@ -173,6 +180,8 @@ header.nav {
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
 #submit-add {
