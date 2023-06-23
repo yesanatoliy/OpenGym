@@ -154,7 +154,8 @@ header.nav {
   display: flex;
   flex-direction: column;
   margin-left: 85%;
-  margin-right: 5%
+  margin-right: 5%;
+  margin-top: 5%;
 }
 
 .add-event {
