@@ -23,6 +23,7 @@ const Home = (props) => {
     return (
       <div>
         {props.user && (<h1 className="welcome">Welcome to the dashboard, {props.user.name} </h1>)}
+        <h1 className="home-title">Events</h1>
         <div className="home">
           {clicked ? (<button id="close" className="add-event" onClick={() => handleClick()}>Close</button>) :
             (<button id="add" className="add-event" onClick={() => handleClick()}>Add Event</button>)}
@@ -38,9 +39,11 @@ const Home = (props) => {
   }
   else {
     return (
-      <div className="home">
-        <h1>Events</h1>
-        <EventList />
+      <div>
+        <h1 className="home-title">Events</h1>
+        <div className="home">
+          <EventList />
+        </div>
       </div>
     )
   }
