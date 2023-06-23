@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
+import { FaVolleyballBall } from 'react-icons/fa'
 
 const NavBar = ({ setUser, user }) => {
 
@@ -24,7 +25,8 @@ const NavBar = ({ setUser, user }) => {
 
                     {/* <button className="nav-button" onClick={handleClick}>Profile</button> */}
                     {user ? (
-                        <div>
+                        <div className="nav-div">
+                            <FaVolleyballBall className="icon" />
                             <Link to="/">
                                 <button className="nav-button">Home</button>
                             </Link>
@@ -32,7 +34,8 @@ const NavBar = ({ setUser, user }) => {
                             <button className="nav-button" onClick={() => signOut()}>Sign Out</button>
 
                         </div>) : (
-                        <div>
+                        <div className="nav-div">
+                            <FaVolleyballBall className="icon" />
                             <Link to="/">
                                 <button className="nav-button">Home</button>
                             </Link>

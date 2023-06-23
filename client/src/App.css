@@ -331,3 +331,13 @@ form.add-form>input {
 #update-user {
   margin-bottom: 30px
 }
+
+.icon {
+  color: white;
+  width: 40px;
+  height: 30px;
+}
+
+.nav-div{
+  padding: 0 auto;
+}
