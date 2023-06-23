@@ -103,7 +103,7 @@ else {
           <h4>{event?.description}</h4>
         </div>
 
-      <h3 className='comment-label'>Comment Section</h3>
+      <h3 className='comment-label'>Comment Section (demo)</h3>
       {comments.map((comment) => (
         <h5 className='comment'>{comment.contents}</h5>
         ))}
