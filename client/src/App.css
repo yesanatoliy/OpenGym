@@ -135,7 +135,7 @@ header.nav {
 }
 
 .event-post {
-  border: ridge 2px;
+  border: outset 3px;
   margin-top: 30px;
   margin-right: 2%;
   padding: 35px 80px;
@@ -231,7 +231,7 @@ form.add-form>input {
   width: 500px;
   margin-left: 10px;
   margin-top: 10px;
-  border-style: inset;
+  border-style: outset;
   padding: 10px 0 10px 10px;
   background-color: #2bb1e6;
   color: white;
