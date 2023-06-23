@@ -13,10 +13,7 @@ const Event = (props) => {
     <div className="event-post" onClick={() => onClick(props.id)}>
         <h2>{props.name}</h2>
         <h5>{props.address}</h5>
-        <h5>{props.cost}</h5>
-        <h5>{props.level}</h5>
-        <h5>{props.date}</h5>
-        <h5>{props.time}</h5>
+        <h5>When: {props.date}, {props.time}</h5>
     </div>
     
   )
