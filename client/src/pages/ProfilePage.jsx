@@ -1,4 +1,4 @@
-import axios from "axios"
+import Client from "../services/api"
 import { useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 
@@ -17,7 +17,7 @@ const ProfilePage = () => {
   }
 
   const getUser = async () => {
-    const result = await axios.get(`/api/user/${user}`)
+    const result = await Client.get(`/user/${user}`)
     setProfile(result.data.result)
   }
 

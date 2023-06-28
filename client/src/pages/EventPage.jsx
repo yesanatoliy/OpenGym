@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import Client from '../services/api'
 import { useEffect, useState } from 'react'
 import EventUpdateForm from '../components/EventUpdateForm'
 
@@ -22,17 +22,17 @@ const EventPage = (props) => {
   const { eventId } = useParams()
 
   const getEvent = async () => {
-    const result = await axios.get(`/api/events/${eventId}`)
+    const result = await Client.get(`/events/${eventId}`)
     setEvent(result.data.event)
   }
 
   const getComments = async () => {
-    const result = await axios.get(`/api/events/${eventId}/comments`)
+    const result = await Client.get(`/events/${eventId}/comments`)
     setComments(result.data.comments)
   }
 
   const deleteEvent = async () => {
-    await axios.delete(`/api/events/${eventId}`)
+    await Client.delete(`/events/${eventId}`)
     navigate('/')
   }
 

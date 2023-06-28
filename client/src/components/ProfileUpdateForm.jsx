@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import axios from "axios"
+import Client from "../services/api"
 import { useNavigate, useParams } from "react-router-dom"
 
 
@@ -15,7 +15,7 @@ const ProfileUpdateForm = () => {
 
 
     const getUser = async () => {
-        let result = await axios.get(`/api/profile/${userId}`)
+        let result = await Client.get(`/profile/${userId}`)
         setProfile(result.data.user)
     }
 
@@ -34,7 +34,7 @@ const ProfileUpdateForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await axios.put(`/api/user/${userId}`, formState)
+        await Client.put(`/user/${userId}`, formState)
         localStorage.setItem(
             "username", `${formState.username}`
         )

@@ -1,12 +1,12 @@
 import Event from "./Event"
-import axios from 'axios'
+import Client from '../services/api'
 import { useState, useEffect } from 'react'
 
 const EventList = () => {
     const [events, setEvents] = useState([])
 
     const getEvents = async () => {
-        const response = await axios.get(`/api/events`)
+        const response = await Client.get(`/events`)
         setEvents(response.data.events)
     }
 
