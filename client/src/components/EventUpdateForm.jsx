@@ -1,4 +1,4 @@
-import axios from "axios"
+import Client from "../services/api"
 import { useState } from "react"
 
 const EventUpdateForm = (props) => {
@@ -20,7 +20,7 @@ const EventUpdateForm = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await axios.put(`/api/events/${props.id}`, formState)
+        await Client.put(`/events/${props.id}`, formState)
         setFormState(initialState)
         toggleUpdateStatus(true)
         props.getEvent()

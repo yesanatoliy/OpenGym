@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import axios from "axios"
+import Client from "../services/api"
 
 const EventAddForm = () => {
 
@@ -18,7 +18,7 @@ const EventAddForm = () => {
   const [user, setUser] = useState({})
 
   const getUser = async () => {
-    const result = await axios.get(`/api/user/${localStorage.getItem('username')}`)
+    const result = await Client.get(`/user/${localStorage.getItem('username')}`)
     setUser(result.data.result)
   }
 
@@ -31,7 +31,7 @@ const EventAddForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post(`/api/events/user/${user._id}`, formState)
+    await Client.post(`/events/user/${user._id}`, formState)
     setFormState(initialState)
   }
 
